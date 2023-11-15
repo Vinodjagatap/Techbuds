@@ -1,0 +1,38 @@
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.screeningapp.R;
+
+public class ScreenActivity extends AppCompatActivity {
+
+    TextView tv1,tv2,tv3,tv4;
+    Button btn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_screen);
+
+        tv1=(TextView) findViewById(R.id.text_view1);
+        tv2=(TextView) findViewById(R.id.text_view2);
+        tv3=(TextView) findViewById(R.id.text_view3);
+        tv3=(TextView) findViewById(R.id.text_view4);
+        btn=(Button) findViewById(R.id.button);
+
+      btn.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view)
+          {
+              Toast.makeText(getApplicationContext(),"Sucessfully logined",Toast.LENGTH_SHORT).show();
+          }
+      });
+    }
+}
+
+
